@@ -44,11 +44,7 @@
         },
         methods: {
             list() {
-                this.$toast.loading({
-                    duration: 0,
-                    forbidClick: true,
-                    message: '加载中'
-                })
+             
                 ProjectApi.list(this.query).then((response) => {
                     let result = response.data
                     let pageNumber = this.$util.parseHeaders(response.headers)

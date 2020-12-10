@@ -7,8 +7,8 @@
             <el-button type="primary" icon="el-icon-edit" round plain style="float: right;" @click="goAdd">写博文</el-button>
         </el-card>
 
-        <div>
-            <el-card shadow="hover" v-for="(item,index) in blogs" :key="'p'+index" style="margin-bottom: 20px">
+        <div v-if="blogs&&blogs.length>0">
+            <el-card shadow="hover" v-for="(item,index) in blogs" :key="'p'+index" style="margin-bottom: 20px" v-if="!item.hide">
                 <div slot="header">
                     <el-row>
                         <el-col :span="16">

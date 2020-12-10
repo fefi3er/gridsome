@@ -40,11 +40,7 @@
         },
 
         mounted() {
-            this.$toast.loading({
-                duration: 0,
-                forbidClick: true,
-                message: '加载中'
-            })
+          
             this.project.name = this.$route.params.name
             ProjectApi.single(this.project.name).then((response) => {
                 let result = response.data

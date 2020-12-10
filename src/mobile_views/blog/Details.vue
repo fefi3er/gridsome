@@ -32,11 +32,7 @@
 
         },
         mounted() {
-            this.$toast.loading({
-                duration: 0,
-                forbidClick: true,
-                message: '加载中'
-            })
+          
             this.blog.id = this.$route.params.id
             GistApi.single(this.blog.id).then((response) => {
                 let result = response.data

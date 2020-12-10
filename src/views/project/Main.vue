@@ -6,8 +6,8 @@
             <el-button @click="$share()" icon="el-icon-share" type="warning" style="margin-left: 10px" plain circle></el-button>
         </el-card>
 
-        <div >
-            <el-card shadow="hover" v-for="(item,index) in projects" :key="'pro'+index" style="margin-bottom: 20px">
+        <div v-if="projects&&projects.length>0">
+            <el-card shadow="hover" v-for="(item,index) in projects" :key="'pro'+index" style="margin-bottom: 20px" v-if="!item.hide">
                 <div slot="header">
                     <el-row>
                         <el-col :span="16">
@@ -61,7 +61,6 @@
             </div>
         </div>
 
-       
     </div>
 </template>
 <script>
