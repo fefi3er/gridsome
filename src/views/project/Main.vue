@@ -6,8 +6,8 @@
             <el-button @click="$share()" icon="el-icon-share" type="warning" style="margin-left: 10px" plain circle></el-button>
         </el-card>
 
-        <div v-if="projects&&projects.length>0">
-            <el-card shadow="hover" v-for="(item,index) in projects" :key="'pro'+index" style="margin-bottom: 20px" v-if="!item.hide">
+        <div >
+            <el-card shadow="hover" v-for="(item,index) in projects" :key="'pro'+index" style="margin-bottom: 20px">
                 <div slot="header">
                     <el-row>
                         <el-col :span="16">
@@ -61,11 +61,7 @@
             </div>
         </div>
 
-        <el-card shadow="never" style="margin-bottom: 20px;padding: 20px 0px 20px 0px;text-align: center" v-if="!projects||projects.length==0">
-            <font style="font-size: 30px;color:#dddddd ">
-                <b>还没有开源项目 (╯°Д°)╯︵ ┻━┻</b>
-            </font>
-        </el-card>
+       
     </div>
 </template>
 <script>

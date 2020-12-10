@@ -7,8 +7,8 @@
             <el-button type="primary" icon="el-icon-edit" round plain style="float: right;" @click="goAdd">写博文</el-button>
         </el-card>
 
-        <div v-if="blogs&&blogs.length>0">
-            <el-card shadow="hover" v-for="(item,index) in blogs" :key="'p'+index" style="margin-bottom: 20px" v-if="!item.hide">
+        <div>
+            <el-card shadow="hover" v-for="(item,index) in blogs" :key="'p'+index" style="margin-bottom: 20px">
                 <div slot="header">
                     <el-row>
                         <el-col :span="16">
@@ -42,11 +42,7 @@
 
         </div>
 
-        <el-card shadow="never" style="margin-bottom: 20px;padding: 20px 0px 20px 0px;text-align: center" v-if="!blogs||blogs.length==0">
-            <font style="font-size: 30px;color:#dddddd ">
-                <b>还没有博客 (╯°Д°)╯︵ ┻━┻</b>
-            </font>
-        </el-card>
+     
     </div>
 </template>
 <script>
